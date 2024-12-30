@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramentas pelo Melhor Preço</title>
+    <style>
+        /* Resetações básicas */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: red;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .menu {
+            display: flex;
+            gap: 10px;
+        }
+
+        header .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+
+        header .menu a:hover {
+            background-color: white;
+            color: red;
+        }
+
+        header .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        header .search-bar input {
+            padding: 5px;
+            font-size: 1rem;
+        }
+
+        header .search-bar button {
+            padding: 5px;
+            background-color: white;
+            color: red;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Hero section */
+        .hero {
+            background-color: #d32f2f;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .hero img {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        /* Destaques */
+        .destaques {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .produto {
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .produto img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .hero {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>Casa viturino</h1>
+        </div>
+        <div class="menu">
+            <a href="index.html">Demasiados</a>
+            <a href="ferramentas.html">Ferramentas</a>
+            <a href="#">Elétrica</a>
+            <a href="#">Tinta</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search your items">
+            <button onclick="searchItems()">🔍</button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h2>Ferramentas pelo Melhor Preço</h2>
+        <img src="FERRAMENT 1 (3).png" alt="Promoção">
+    </section>
+
+    <!-- Destaques -->
+    <section class="destaques">
+        <div class="produto">
+            <img src="5hG3j6r 1.png"g alt="Produto 1">
+            <p>Massa Corrida Suvinil</p>
+       
+        </div>
+        <div class="produto">
+            <img src="plafon_pv_branco_com_bocal_de_porcelana_1x_e27_blumenau_iluminacao_753_1_b890f15b4d8f9ea8cd5e629ab3f69087 1.png" alt="Produto 2">
+            <p>Paflon</p>
+       
+        </div>
+        <div class="produto">
+            <img src="Espacador-Nivelador-20mm-Verde-Cortag---102620 1.png" alt="Produto 3">
+            <p>Espacador De Revestimento</p>
+          
+        </div>
+        <div class="produto">
+            <img src="shopping 1.png" alt="Produto 3">
+            <p>Torneira Bica Móvel</p>
+     
+        </div>
+        <div class="produto">
+            <a href=""><img src="dd.png" alt="Produto 3"></a>
+            <p>Tinta Acrilica Interior</p>
+           
+        </div>
+        
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Ferramentas MG - Todos os Direitos Reservados</p>
+    </footer>
+
+    <script>
+      function searchItems() {
+    const searchInput = document.getElementById('search').value;
+    const baseUrl = "pagina-de-busca.html"; // Substitua pela URL da página de resultados
+    window.location.href = `${baseUrl}?q=${encodeURIComponent(searchInput)}`;
+}
+
+    </script>
+
+</body>
+</html>
